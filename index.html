@@ -10,6 +10,10 @@
         .done{
             text-decoration: line-through;
         }
+        #BtnTop{
+             width: 24vw;
+             float: left;   
+            }
     </style>
 </head>
 <body>
@@ -19,13 +23,13 @@
         <h3>{{title}}</h3>
 
         <form @submit.prevent="addTodo">
-            <label for="newTodo">New todo</label>
+            <label for="newTodo">Todo List</label>
             <input v-model = "newTodo" type="text" name="newTodo" id="newTodo">
-            <button type="submit" name="button">add</button>
+            <button id="BtnTop" type="submit" name="button">add</button>
         </form>
 
-        <button @click="allGone" type="button" >Remove all</button>
-        <button @click="allDone" type="button" >all done</button>
+        <button @click="allGone" id="BtnTop" type="button" >Remove all</button>
+        <button @click="allDone" id="BtnTop" type="button" >all done</button>
 
         <ul>
             <li v-for = "todo in todos">
